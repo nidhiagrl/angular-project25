@@ -13,6 +13,7 @@ import { OrderComponent } from './order/order.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { CustomerService } from './customer-form/customer.service';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCIemuwK1j2jFbVzSFVk-3v0xH_5Hbe7nE",
@@ -35,6 +36,7 @@ const firebaseConfig = {
     {path:'customer/new',component:CustomerFormComponent}
   ])],
   declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [CustomerService]
 })
 export class AppModule { }
