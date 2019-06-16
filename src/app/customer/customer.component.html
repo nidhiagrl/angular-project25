@@ -1,23 +1,41 @@
 <h2>Customers</h2>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <!-- <a class="navbar-brand" href="#">Customer Manager</a> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subNavBar" aria-controls="subNavBar" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<!-- <a class="navbar-brand" href="#">Customer Manager</a> -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subNavBar" aria-controls="subNavBar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="subNavBar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" routerLink="customer">Card View <span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink="card">
+ Card View </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="order">List View</a>
+
+            <a class="nav-link" routerLink="list">
+                      <svg class="i-menu" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+        </svg> List View</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="about">Map View</a>
+           <a class="nav-link" routerLink="map">
+						         <svg class="i-location" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <circle cx="16" cy="11" r="4" />
+            <path d="M24 15 C21 22 16 30 16 30 16 30 11 22 8 15 5 8 10 2 16 2 22 2 27 8 24 15 Z" />
+        </svg>
+              
+              
+            Map View</a>
+            
+           
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" routerLink="new">New Customer</a>
+            <a class="nav-link" routerLink="new">
+                      <svg class="i-plus" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+            <path d="M16 2 L16 30 M2 16 L30 16" />
+        </svg> New Customer</a>
           </li>
           
         </ul>
@@ -28,3 +46,4 @@
         </form>
       </div>
     </nav>
+    <router-outlet></router-outlet>

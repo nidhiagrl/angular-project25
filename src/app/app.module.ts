@@ -14,6 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { CustomerService } from './customer-form/customer.service';
+import { CardComponent } from './card/card.component';
+import { ListComponent } from './list/list.component';
+import { MapComponent } from './map/map.component';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCIemuwK1j2jFbVzSFVk-3v0xH_5Hbe7nE",
@@ -30,7 +33,7 @@ const firebaseConfig = {
   AngularFirestoreModule,
   AppRoutingModule
 ],
-  declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent ],
+  declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent, CardComponent, ListComponent, MapComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CustomerService]
 })
