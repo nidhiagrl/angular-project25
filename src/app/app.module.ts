@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -28,7 +29,7 @@ const firebaseConfig = {
     appId: "1:213760179206:web:6f01998eb073b048"
   };
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,
+  imports:      [ BrowserModule, FormsModule,FontAwesomeModule,
   AngularFireModule.initializeApp(firebaseConfig),
   AngularFirestoreModule,
   AppRoutingModule
