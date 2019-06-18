@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,7 +10,16 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 })
 export class CardComponent implements OnInit {
    faEdit = faEdit;
-  constructor() { }
+   items:any[];
+  constructor(private db: AngularFireDatabase) {
+       this.db.list('/')
+      .valueChanges()
+      .subscribe(val => {
+        this.items = val;
+        console.log(val);
+        
+      });
+  }
 
   ngOnInit() {
   }

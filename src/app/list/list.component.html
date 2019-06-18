@@ -12,34 +12,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"></th>
-      <td><a href ="">Ted</a></td>
-      <td>James</td>
-      <td>1234 Anywhere St.</td>
-      <td>Phoenix</td>
-      <td>Arizona</td>
-      <td>$209.57</td>
-      <td><a href ="">View Orders</a></td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td><a href ="">Ted</a></td>
-      <td>James</td>
-      <td>1234 Anywhere St.</td>
-      <td>Phoenix</td>
-      <td>Arizona</td>
-      <td>$209.57</td>
-      <td><a href ="">View Orders</a></td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td><a href ="">Ted</a></td>
-      <td>James</td>
-      <td>1234 Anywhere St.</td>
-      <td>Phoenix</td>
-      <td>Arizona</td>
-      <td>$209.57</td>
+    <tr *ngFor="let item of items">
+      <td></td>
+      <td><a href ="">{{item.firstname}}</a></td>
+      <td>{{item.lastname}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.state}}</td>
+      <td>${{item.ordertotal}}</td>
       <td><a href ="">View Orders</a></td>
     </tr>
   </tbody>

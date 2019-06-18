@@ -1,14 +1,14 @@
 <div class="cc">
 	<div class="row">
-		<div class="col-sm-3">
+		<div class="col-sm-3" *ngFor="let item of items">
 			<div class="card">
 				<div class="card-head text-white bg-primary">
 					<div class="container">
 						<div class="row">
 							<div class="col" style="vertical-align:middle">
-								<h5>Card title</h5>
+								<h5>{{item.firstname}} {{item.lastname}}</h5>
 							</div>
-							<div class="col" style="padding-top:5px">
+							<div class="col col-lg-2" style="padding-top:5px;">
 								<a href="#">
 									<fa-icon [icon]="faEdit" [styles]="{'color': 'white'}" pull="right"></fa-icon>
 								</a>
@@ -24,8 +24,8 @@
 								<img class="card-img" src="https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png" alt="Card image cap">
           </div>
           <div class="col card-col" style="margin-top:14px;">
-            <p >Phoenix,</p>
-            <p> Arizona</p>
+            <p >{{item.city}},</p>
+            <p> {{item.state}}</p>
             <a href="">View Orders</a>
           </div>
         </div>
@@ -34,142 +34,6 @@
     </div>
   </div>
   </div>  
-  	<div class="col-sm-3">
-			<div class="card">
-				<div class="card-head text-white bg-primary">
-					<div class="container">
-						<div class="row">
-							<div class="col" style="vertical-align:middle">
-								<h5>Card title</h5>
-							</div>
-							<div class="col" style="padding-top:5px">
-								<a href="#">
-									<fa-icon [icon]="faEdit" [styles]="{'color': 'white'}" pull="right"></fa-icon>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-
-					<div class="container">
-						<div class="row">
-							<div class="col card-col">
-								<img class="card-img" src="https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png" alt="Card image cap">
-          </div>
-          <div class="col card-col" style="margin-top:14px;">
-            <p >Phoenix,</p>
-            <p> Arizona</p>
-            <a href="">View Orders</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
   </div>
-  </div> 
-  	<div class="col-sm-3">
-			<div class="card">
-				<div class="card-head text-white bg-primary">
-					<div class="container">
-						<div class="row">
-							<div class="col" style="vertical-align:middle">
-								<h5>Card title</h5>
-							</div>
-							<div class="col" style="padding-top:5px">
-								<a href="#">
-									<fa-icon [icon]="faEdit" [styles]="{'color': 'white'}" pull="right"></fa-icon>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-
-					<div class="container">
-						<div class="row">
-							<div class="col card-col">
-								<img class="card-img" src="https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png" alt="Card image cap">
-          </div>
-          <div class="col card-col" style="margin-top:14px;">
-            <p >Phoenix,</p>
-            <p> Arizona</p>
-            <a href="">View Orders</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  </div> 
-  	<div class="col-sm-3">
-			<div class="card">
-				<div class="card-head text-white bg-primary">
-					<div class="container">
-						<div class="row">
-							<div class="col" style="vertical-align:middle">
-								<h5>Card title</h5>
-							</div>
-							<div class="col" style="padding-top:5px">
-								<a href="#">
-									<fa-icon [icon]="faEdit" [styles]="{'color': 'white'}" pull="right"></fa-icon>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-
-					<div class="container">
-						<div class="row">
-							<div class="col card-col">
-								<img class="card-img" src="https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png" alt="Card image cap">
-          </div>
-          <div class="col card-col" style="margin-top:14px;">
-            <p >Phoenix,</p>
-            <p> Arizona</p>
-            <a href="">View Orders</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  </div> 
-  	<div class="col-sm-3">
-			<div class="card">
-				<div class="card-head text-white bg-primary">
-					<div class="container">
-						<div class="row">
-							<div class="col" style="vertical-align:middle">
-								<h5>Card title</h5>
-							</div>
-							<div class="col" style="padding-top:5px">
-								<a href="#">
-									<fa-icon [icon]="faEdit" [styles]="{'color': 'white'}" pull="right"></fa-icon>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-
-					<div class="container">
-						<div class="row">
-							<div class="col card-col">
-								<img class="card-img" src="https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png" alt="Card image cap">
-          </div>
-          <div class="col card-col" style="margin-top:14px;">
-            <p >Phoenix,</p>
-            <p> Arizona</p>
-            <a href="">View Orders</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  </div> 
-</div>
 
 </div>
