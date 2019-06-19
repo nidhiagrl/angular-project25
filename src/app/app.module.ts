@@ -19,13 +19,14 @@ import { CustomerService } from './customer-form/customer.service';
 import { CardComponent } from './card/card.component';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,FontAwesomeModule,
   AngularFireModule.initializeApp(environment.firebase),
   AppRoutingModule
 ],
-  declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent, CardComponent, ListComponent, MapComponent ],
+  declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent, CardComponent, ListComponent, MapComponent, CustomerDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CustomerService,AngularFireDatabase]
 })

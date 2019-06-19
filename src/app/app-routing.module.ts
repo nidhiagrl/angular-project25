@@ -6,6 +6,7 @@ import { OrderComponent } from './order/order.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component'
 import { CardComponent } from './card/card.component';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
           { path: 'card', component: CardComponent },
           { path: 'list', component: ListComponent },
 		      { path: 'map', component : MapComponent },
-		      { path: 'new', component : CustomerFormComponent }
+		      { path: 'new', component : CustomerFormComponent },
+          { path: 'customer-detail', component: CustomerDetailComponent}
         ]
     },
     {path :'order', component:OrderComponent},

@@ -14,12 +14,12 @@
   <tbody>
     <tr *ngFor="let item of items">
       <td></td>
-      <td><a href ="">{{item.firstname}}</a></td>
-      <td>{{item.lastname}}</td>
+      <td><a routerLink="customer-detail">{{item.firstName}}</a></td>
+      <td>{{item.lastName}}</td>
       <td>{{item.address}}</td>
       <td>{{item.city}}</td>
       <td>{{item.state}}</td>
-      <td>${{item.ordertotal}}</td>
+      <td>${{item.orderTotal}}</td>
       <td><a href ="">View Orders</a></td>
     </tr>
   </tbody>
