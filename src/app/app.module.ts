@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
@@ -15,7 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
-import { CustomerService } from './customer-form/customer.service';
+import { CustomerService } from './customer.service';
 import { CardComponent } from './card/card.component';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
@@ -23,6 +24,7 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,FontAwesomeModule,
+  Ng2SearchPipeModule,
   AngularFireModule.initializeApp(environment.firebase),
   AppRoutingModule
 ],

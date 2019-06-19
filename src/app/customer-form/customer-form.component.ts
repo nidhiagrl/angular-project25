@@ -1,5 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
-import { CustomerService } from './customer.service';
+import { CustomerService } from '../customer.service';
 
 
 @Component({

@@ -18,6 +18,7 @@
     "core-js": "2.6.9",
     "firebase": ">= 5.5.7 <7",
     "jquery": "3.4.1",
+    "ng2-search-filter": "^0.5.1",
     "popper.js": "1.15.0",
     "rxjs": "6.5.2",
     "zone.js": "0.9.1"
