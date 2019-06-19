@@ -19,10 +19,10 @@ const routes: Routes = [
           { path: 'card', component: CardComponent },
           { path: 'list', component: ListComponent },
 		      { path: 'map', component : MapComponent },
-		      { path: 'new', component : CustomerFormComponent },
-          { path: 'customer-detail', component: CustomerDetailComponent}
+		      { path: 'new', component : CustomerFormComponent } 
         ]
     },
+    { path:'customer-detail/:firstName', component:CustomerDetailComponent},
     {path :'order', component:OrderComponent},
     {path :'about', component:AboutComponent},
     {path :'login', component:LoginComponent}
