@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CustomerService } from '../customer.service';
 import {  faUser,faTags,faList, faEdit} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,15 +9,17 @@ import {  faUser,faTags,faList, faEdit} from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./customer-detail.component.css']
 })
 export class CustomerDetailComponent implements OnInit {
-  item:string;
+  firstName:string;
+  item;
  faUser= faUser;
  faTags = faTags;
  faList = faList;
  faEdit = faEdit;
-  constructor( private activatedRoute: ActivatedRoute) {
-    this.item = this.activatedRoute.snapshot.paramMap.get('firstName');
-    console.log(this.item);
-   }
+  constructor( private activatedRoute: ActivatedRoute, private custSer :CustomerService) {
+    this.firstName = this.activatedRoute.snapshot.paramMap.get('firstName');
+    this.item = this.custSer.getNodeDetails(this.firstName);
+    console.log("Here"+this.item);
+     }
 
   ngOnInit() {
   }

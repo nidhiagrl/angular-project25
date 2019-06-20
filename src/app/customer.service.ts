@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CustomerService {
-  temp;
+
   k: string = 'user';
   constructor(private db: AngularFireDatabase) {
-   
-   }
+
+  }
 
   addNode(value: object): void {
     this.db.database.ref('/').on('child_added', (snapshot) => {
@@ -17,14 +17,37 @@ export class CustomerService {
     this.db.database.ref().child(this.k).set(value);
   }
 
-  getNodes(): object {
-    this.db.list('/')
-      .valueChanges()
-      .subscribe(val => {
-        this.temp = val;
+  getNodes(): object[] {
+    var t = [];
+    var ref = this.db.database.ref("/");
+    ref.once("value")
+      .then(function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+          t.push(childSnapshot.val());
+          // var key = childSnapshot.key;
+          // console.log(key);
+          // var childData = childSnapshot.val();
+          //  console.log(childData);
+        });
       });
-      console.log(this.temp);
-    return this.temp;
+    //console.log(t);
+    return t;
   }
 
+  getNodeDetails(val: string): object {
+    var temp = [];
+    var childData;
+    var ref = this.db.database.ref("/");
+    ref.on("value", (snapshot) => {
+      snapshot.forEach(function (childSnapshot) {
+        childData = childSnapshot.val();
+        var found = (childData.firstName === val);
+        if (found) {
+          temp = childSnapshot.exportVal();
+        }
+        return found;
+      });
+    });
+    return temp;
+  }
 }
