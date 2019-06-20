@@ -9,6 +9,7 @@ import { CustomerService } from '../customer.service';
 })
 export class ListComponent implements OnInit {
   items: any;
+  
   constructor( private custSer:CustomerService ) {
     this.items = this.custSer.getNodes();
 
@@ -24,6 +25,5 @@ export class ListComponent implements OnInit {
   }
   ngOnInit() {
   }
-
-
+ 
 }

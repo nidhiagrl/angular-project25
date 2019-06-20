@@ -51,4 +51,17 @@ export class CustomerService {
     });
     return temp;
   }
+  getImageURL(gender:string):string{
+    let url:string;
+     if(gender=='male')
+      url=URLs[0];
+      else
+       url=URLs[1];
+       return url;
+  }
 }
+const URLs = [
+  'https://raw.githubusercontent.com/nidhiagrl/image/master/profile_male.png',
+  'https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png'
+
+]

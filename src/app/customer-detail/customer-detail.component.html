@@ -17,8 +17,7 @@
           <li class="nav-item">
            <a class="nav-link disabled" routerLink="map">
 						         <fa-icon [icon] ="faEdit"></fa-icon>Edit Customer</a>
-            
-           
+     
           </li>
 
          
@@ -29,7 +28,8 @@
     	<div class="detail-body">
 					<div class="row">
 							<div class="col">
-								<img class="card-img" src="https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png" alt="Card image cap">
+								<img class="card-img" [src]="this.custSer.getImageURL(item.gender)"
+       alt="Card image">
           </div>
           <div class="col card-col" style="margin-top:14px;">
             <h5>{{item.firstName}} {{item.lastName}}</h5>

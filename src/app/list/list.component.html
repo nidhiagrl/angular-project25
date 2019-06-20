@@ -13,7 +13,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of items">
-      <td></td>
+      <td><img class="card-img" [src]="this.custSer.getImageURL(item.gender)"
+       alt="Card image"></td>
       <td><a [routerLink]= '["../../customer-detail",item.firstName]'>
       {{item.firstName}}</a></td>
       <td>{{item.lastName}}</td>
