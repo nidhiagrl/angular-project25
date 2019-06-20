@@ -12,10 +12,17 @@ export class CardComponent implements OnInit {
    items:object;
   constructor(private custSer:CustomerService) {
    this.items = this.custSer.getNodes();
-
   }
 
   ngOnInit() {
+  }
+  getImageURL(gender:string){
+     if(gender=='male')
+    {return
+    'https://raw.githubusercontent.com/nidhiagrl/image/master/profile_male.png';}
+    else
+     {return
+    'https://raw.githubusercontent.com/nidhiagrl/image/master/profile_female.png';}
   }
 
 }

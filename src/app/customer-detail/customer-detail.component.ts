@@ -18,7 +18,7 @@ export class CustomerDetailComponent implements OnInit {
   constructor( private activatedRoute: ActivatedRoute, private custSer :CustomerService) {
     this.firstName = this.activatedRoute.snapshot.paramMap.get('firstName');
     this.item = this.custSer.getNodeDetails(this.firstName);
-    console.log("Here"+this.item);
+    //console.log("Here"+this.item);
      }
 
   ngOnInit() {
