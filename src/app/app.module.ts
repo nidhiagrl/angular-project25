@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AgmCoreModule } from '@agm/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
@@ -21,15 +21,20 @@ import { CardComponent } from './card/card.component';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { MapService } from './map.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,FontAwesomeModule,
-  Ng2SearchPipeModule,
   AngularFireModule.initializeApp(environment.firebase),
+  AgmCoreModule.forRoot({
+      // please get your own API key here:
+      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
+      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+    }),
   AppRoutingModule
 ],
   declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent, CardComponent, ListComponent, MapComponent, CustomerDetailComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [CustomerService,AngularFireDatabase]
+  providers: [CustomerService,AngularFireDatabase, MapService]
 })
 export class AppModule { }
