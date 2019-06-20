@@ -12,10 +12,6 @@ zoom: number = 4;
   // initial center position for the map
    lat:number=33.4484;
    lng:number=-112.0740;
-  //  bounds :LatLngLiteral[]= [
-  //    { lat:43.473424,
-  // lng:-3.782104},
-  // { lat: 43.476747, lng: -3.777473 }]
   
    
   bounds: LatLngLiteral[]=[

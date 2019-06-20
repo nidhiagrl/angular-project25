@@ -5,4 +5,7 @@ export class MapService {
 
   constructor() { }
 
+getLatLng(item){
+  item.city
+}
 }
