@@ -29,7 +29,7 @@
           <div class="col card-col" style="margin-top:14px;">
             <p >{{item.city}},</p>
             <p> {{item.state}}</p>
-            <a href="">View Orders</a>
+            <a [routerLink]= '["../../order-detail",item.firstName]'>View Orders</a>
           </div>
         </div>
       </div>

@@ -7,15 +7,17 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component'
+import { OrderDetailComponent } from './order-detail/order-detail.component'
 import { CardComponent } from './card/card.component';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
-      { 
-        path: 'customer',
-        component: CustomerComponent, 
+      { path:'', redirectTo: 'customer/card',pathMatch: 'full' },
+       { path: 'customer',
+        component: CustomerComponent,
         children: [
+          {path:'', redirectTo:'card' ,pathMatch:'full'},
           { path: 'card', component: CardComponent },
           { path: 'list', component: ListComponent },
 		      { path: 'map', component : MapComponent },
@@ -23,6 +25,7 @@ const routes: Routes = [
         ]
     },
     { path:'customer-detail/:firstName', component:CustomerDetailComponent},
+    { path:'order-detail/:firstName', component:OrderDetailComponent},
     {path :'order', component:OrderComponent},
     {path :'about', component:AboutComponent},
     {path :'login', component:LoginComponent}

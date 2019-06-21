@@ -23,6 +23,7 @@ import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 import { MapService } from './map.service';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,FontAwesomeModule,
@@ -34,7 +35,7 @@ import { MapService } from './map.service';
     }),
   AppRoutingModule,HttpClientModule
 ],
-  declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent, CardComponent, ListComponent, MapComponent, CustomerDetailComponent ],
+  declarations: [ AppComponent, HelloComponent, BsNavbarComponent, CustomerComponent, OrderComponent, AboutComponent, LoginComponent, CustomerFormComponent, CardComponent, ListComponent, MapComponent, CustomerDetailComponent, OrderDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CustomerService,AngularFireDatabase, MapService]
 })

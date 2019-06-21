@@ -22,7 +22,7 @@
       <td>{{item.city}}</td>
       <td>{{item.state}}</td>
       <td>${{item.orderTotal}}</td>
-      <td><a href ="">View Orders</a></td>
+      <td><a [routerLink]= '["../../order-detail",item.firstName]'>View Orders</a></td>
     </tr>
   </tbody>
 </table>
