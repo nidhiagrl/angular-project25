@@ -36,6 +36,7 @@ export class CustomerFormComponent implements OnInit {
 
   editCust() {
     this.cust.updateCust(this.key, this.model);
+    alert("Details updated");
   }
 
   addCust() {
