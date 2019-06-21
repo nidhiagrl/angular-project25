@@ -1,0 +1,21 @@
+<h2 class="title">Order Details</h2>
+<div class="jumbotron">
+
+  
+<div class="detail">
+	<div class="row">
+		<div class="col">
+			<img class="card-img" [src]="this.custSer.getImageURL(item.gender)"
+       alt="Card image">
+          </div>
+          <div class="col card-col" style="margin-top:14px;">
+            <h5>{{item.firstName}} {{item.lastName}}</h5>
+            <p style="margin-bottom:0px;">{{item.address}}</p>
+            <p> {{item.city}},{{item.state}}</p>
+            <h5>$ {{item.orderTotal}}</h5>
+            
+          </div>
+        </div>
+    	</div>
+
+</div>

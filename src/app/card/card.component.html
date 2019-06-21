@@ -1,0 +1,42 @@
+<div class="cc">
+	<div class="row">
+		<div class="col-sm-3" *ngFor="let item of items">
+			<div class="card">
+				<div class="card-head text-white bg-primary">
+					<div class="container">
+						<div class="row">
+							<div class="col" style="vertical-align:middle">
+                <span [routerLink]= '["../../customer-detail",item.firstName]'>
+								<h5>{{item.firstName}} {{item.lastName}}</h5>
+                </span>
+							</div>
+							<div class="col col-lg-2" style="padding-top:5px;">
+								<a [routerLink]= '["../edit",item.firstName]'>
+									<fa-icon [icon]="faEdit" [styles]="{'color': 'white'}" pull="right"></fa-icon>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col card-col">
+								<img class="card-img" [src]="this.custSer.getImageURL(item.gender)"
+   alt="Card image">
+          </div>
+          <div class="col card-col" style="margin-top:14px;">
+            <p >{{item.city}},</p>
+            <p> {{item.state}}</p>
+            <a [routerLink]= '["../../order-detail",item.firstName]'>View Orders</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>  
+  </div>
+
+</div>

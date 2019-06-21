@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAlignJustify, faMapMarkerAlt, faPlus, faThLarge, faUser} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-customer',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-
+   faMenu =faAlignJustify;
+   faMap = faMapMarkerAlt;
+   faPlus = faPlus;
+   faSquare = faThLarge;
+   faUser = faUser;
   constructor() { }
 
   ngOnInit() {

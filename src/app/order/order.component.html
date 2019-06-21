@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Order Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td><img class="card-img" [src]="this.custSer.getImageURL(item.gender)"
+       alt="Card image"></td>
+      <td><a [routerLink]= '["../customer-detail",item.firstName]'>
+      {{item.firstName}}</a></td>
+      <td>{{item.lastName}}</td>
+      <td>${{item.orderTotal}}</td>
+    </tr>
+  </tbody>
+</table>

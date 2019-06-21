@@ -1,0 +1,19 @@
+.title{
+  padding-left: 10px;
+}
+.card-img{
+  height:150px;
+  width:150px;
+}
+.detail{
+  width:500px;
+}
+.detail-body{
+margin-left:70px;
+  margin-bottom:60px;
+}
+agm-map {
+  height: 500px;
+  width:700px;
+  
+}

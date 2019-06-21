@@ -1,0 +1,41 @@
+<div class="title">
+ <h3> <fa-icon [icon] ="faUser"></fa-icon> Customers</h3>
+</div>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subNavBar" aria-controls="subNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="subNavBar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="card">
+              <fa-icon [icon] ="faSquare"></fa-icon> Card View 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="list">
+                      <fa-icon [icon] ="faMenu"></fa-icon> List View
+            </a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link" routerLink="map">
+						         <fa-icon [icon] ="faMap"></fa-icon> Map View</a>
+            
+           
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="new">
+                     <fa-icon [icon] ="faPlus"></fa-icon> New Customer</a>
+          </li>
+          
+        </ul>
+        <form>
+          <span>Filter:  </span>
+          <input class="form-control" type="text" name="search"
+          [(ngModel)]="searchText" placeholder="type to search" aria-label="Search">
+        </form>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
