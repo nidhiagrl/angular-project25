@@ -21,7 +21,8 @@ const routes: Routes = [
           { path: 'card', component: CardComponent },
           { path: 'list', component: ListComponent },
 		      { path: 'map', component : MapComponent },
-		      { path: 'new', component : CustomerFormComponent } 
+		      { path: 'new', component : CustomerFormComponent },
+          { path: 'edit/:firstName',component: CustomerFormComponent}
         ]
     },
     { path:'customer-detail/:firstName', component:CustomerDetailComponent},

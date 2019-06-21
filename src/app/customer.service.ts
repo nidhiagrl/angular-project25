@@ -10,11 +10,34 @@ export class CustomerService {
 
   }
 
+  getNodeKey(val: string): string {
+    var temp;
+    var childData;
+    var ref = this.db.database.ref("/");
+    ref.on("value", (snapshot) => {
+
+      snapshot.forEach(function (childSnapshot) {
+        childData = childSnapshot.val();
+        var found = (childData.firstName === val);
+        if (found) {
+          temp = childSnapshot.key;
+
+        }
+        return found;
+      });
+    });
+    return temp;
+  }
+
   addNode(value: object): void {
     this.db.database.ref('/').on('child_added', (snapshot) => {
       this.k += snapshot.numChildren();
     });
     this.db.database.ref().child(this.k).set(value);
+  }
+
+  updateCust(val: string, model: object): void {
+    this.db.database.ref().child(val).set(model);
   }
 
   getNodes(): object[] {
@@ -51,13 +74,13 @@ export class CustomerService {
     });
     return temp;
   }
-  getImageURL(gender:string):string{
-    let url:string;
-     if(gender=='male')
-      url=URLs[0];
-      else
-       url=URLs[1];
-       return url;
+  getImageURL(gender: string): string {
+    let url: string;
+    if (gender == 'male')
+      url = URLs[0];
+    else
+      url = URLs[1];
+    return url;
   }
 }
 const URLs = [
