@@ -1,53 +1,50 @@
-
-<h2 class="title"><fa-icon [icon] ="faUser"></fa-icon> Customer Information</h2>
+<h2 class="title">
+	<fa-icon [icon]="faUser"></fa-icon> Customer Information
+</h2>
 <nav class="navbar navbar-expand-md ">
 
-      <div  id="custNavBar">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="" style="color:black;">
-              <fa-icon [icon] ="faList"></fa-icon> Customer Details 
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="" style="color:black;">
-                      <fa-icon [icon] ="faTags"></fa-icon> Customer Orders
-            </a>
-          </li>
-          <li class="nav-item">
-           <a class="nav-link disabled" routerLink="map">
-						         <fa-icon [icon] ="faEdit"></fa-icon>Edit Customer</a>
-     
-          </li>
+	<div id="custNavBar">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" routerLink="" style="color:black;">
+					<fa-icon [icon]="faList"></fa-icon> Customer Details
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" routerLink="" style="color:black;">
+					<fa-icon [icon]="faTags"></fa-icon> Customer Orders
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" routerLink="map">
+					<fa-icon [icon]="faEdit"></fa-icon>Edit Customer
+				</a>
 
-         
-          
-        </ul>
-      </div>
-    </nav>
-    	<div class="detail-body">
-					<div class="row">
-							<div class="col">
-								<img class="card-img" [src]="this.custSer.getImageURL(item.gender)"
+			</li>
+
+
+
+		</ul>
+	</div>
+</nav>
+<div class="detail-body">
+<div class="detail">
+	<div class="row">
+		<div class="col">
+			<img class="card-img" [src]="this.custSer.getImageURL(item.gender)"
        alt="Card image">
           </div>
           <div class="col card-col" style="margin-top:14px;">
             <h5>{{item.firstName}} {{item.lastName}}</h5>
-            <span>{{item.address}}</span>
+            <p style="margin-bottom:0px;">{{item.address}}</p>
             <span> {{item.city}},{{item.state}}</span>
             
           </div>
         </div>
     	</div>
-    <agm-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom"
-  [disableDefaultUI]="false"
-  [zoomControl]="false">
-  <agm-marker 
-      
-      [latitude]="lat"
-      [longitude]="lng"
-      >
+    <agm-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom" [zoomControl]="true" [disableDefaultUI]="false"
+     [mapTypeControl]="true">
+  <agm-marker [latitude]="lat" [longitude]="lng">
   </agm-marker>
 </agm-map>
-    
-    
+</div>

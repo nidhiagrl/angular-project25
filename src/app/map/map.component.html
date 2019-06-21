@@ -1,7 +1,6 @@
 
-<agm-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom"
-  [disableDefaultUI]="false"
-  [zoomControl]="false">
+<agm-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom" [zoomControl]="true" [disableDefaultUI]="false"
+     [mapTypeControl]="true">
   <agm-marker 
       *ngFor="let m of bounds;"
       [latitude]="m.lat"

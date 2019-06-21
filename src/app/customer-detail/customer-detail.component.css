@@ -5,10 +5,15 @@
   height:150px;
   width:150px;
 }
-.detail-body{
+.detail{
   width:500px;
 }
+.detail-body{
+margin-left:70px;
+  margin-bottom:60px;
+}
 agm-map {
-  height: 300px;
-  width:500px;
+  height: 500px;
+  width:700px;
+  
 }

@@ -5,6 +5,7 @@ import { MapService } from '../map.service';
 import {  faUser,faTags,faList, faEdit} from '@fortawesome/free-solid-svg-icons';
 import { LatLngLiteral } from '@agm/core';
 
+
 @Component({
   selector: 'app-customer-detail',
   templateUrl: './customer-detail.component.html',
@@ -12,34 +13,37 @@ import { LatLngLiteral } from '@agm/core';
 })
 export class CustomerDetailComponent implements OnInit {
   firstName:string;
-  item;
+  item : any;
  faUser= faUser;
  faTags = faTags;
  faList = faList;
  faEdit = faEdit;
  zoom: number = 7;
+
  
   // initial center position for the map
    lat:number=33.4484;
    lng:number=-112.0740;
   val :LatLngLiteral;
    
-  // bounds: LatLngLiteral[]=[
-  //   { lat: 33.4484, lng: -112.0740 },//Phoenix,Arizona 
-  //   { lat: 33.0370, lng: -117.2920 },//Encinitas,California
-  //   { lat: 47.6062, lng: -122.3321 },//Seattle,Washington
-  //   { lat: 33.3062, lng: -111.8413 },//Chandler,Arizona
-  //   { lat: 32.7767, lng:-96.7970 },//Dallas,Texas
-  //   { lat: 28.5383, lng: -81.3792 }//Orlando,Florida
-    
-    
-  // ];
   constructor( private activatedRoute: ActivatedRoute, private custSer :CustomerService,
   private mapSer :MapService) {
     this.firstName = this.activatedRoute.snapshot.paramMap.get('firstName');
     this.item = this.custSer.getNodeDetails(this.firstName);
-    this.val = this.mapSer.getLatLng(this.item);
-    //console.log("Here"+this.item);
+     this.mapSer.getLatLng(this.item).subscribe( ( data: object)=> {
+        //console.log(data);
+      let x = data["results"];
+      let y = x[0];
+      let res = y["geometry"];
+      let ty = res["location"];
+      this.val= ty;
+      this.lat = this.val.lat;
+      this.lng = this.val.lng;
+      // console.log(this.val);
+     });
+
+    
+
      }
 
   ngOnInit() {
