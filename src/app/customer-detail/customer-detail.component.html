@@ -11,12 +11,14 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" routerLink="" style="color:black;">
+				<a class="nav-link" [routerLink]='["../../order-detail",item.firstName]' 
+        style="color:black;">
 					<fa-icon [icon]="faTags"></fa-icon> Customer Orders
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link disabled" routerLink="map">
+				<a class="nav-link" [routerLink]='["../../customer/edit",item.firstName]' 
+        style="color:black;">
 					<fa-icon [icon]="faEdit"></fa-icon>Edit Customer
 				</a>
 
